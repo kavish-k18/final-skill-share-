@@ -1,0 +1,341 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SkillSphere - Project Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dae2fd",
+                        "surface-container": "#eceef0",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#004395",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-error-container": "#93000a",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#565e74",
+                        "background": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "error": "#ba1a1a",
+                        "surface": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-container": "#3980f4",
+                        "on-secondary-fixed": "#002113",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001a42",
+                        "secondary-container": "#6cf8bb",
+                        "primary-fixed-dim": "#bec6e0",
+                        "tertiary": "#000000",
+                        "on-primary-fixed": "#131b2e",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary-container": "#001a42",
+                        "secondary": "#006c49",
+                        "surface-dim": "#d8dadc",
+                        "tertiary-fixed": "#d8e2ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary-fixed-variant": "#005236",
+                        "tertiary-fixed-dim": "#adc6ff",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-container": "#00714d",
+                        "surface-container-low": "#f2f4f6",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#45464d",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-container": "#7c839b",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "primary-container": "#131b2e",
+                        "outline": "#76777d",
+                        "surface-container-highest": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-padding-desktop": "40px",
+                        "base": "4px",
+                        "container-padding-mobile": "16px",
+                        "section-gap": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "mono-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "mono-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col gap-base h-screen p-gutter bg-surface-container-low border-r border-outline-variant w-64 fixed left-0 top-0 flex-shrink-0 z-50">
+<!-- Header -->
+<div class="mb-8 px-4">
+<h1 class="text-headline-md font-headline-md font-bold text-primary">Freelance Portal</h1>
+<p class="text-label-lg font-label-lg text-on-surface-variant mt-1">Verified Competence</p>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col gap-2 flex-grow">
+<!-- Active Project/Dashboard Context -->
+<a class="flex items-center gap-3 bg-primary-container text-on-primary-container rounded-lg px-4 py-3 scale-[0.98]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-label-lg font-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-label-lg font-label-lg">Active Projects</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-label-lg font-label-lg">Marketplace</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-label-lg font-label-lg">Payments</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span class="text-label-lg font-label-lg">Support</span>
+</a>
+</div>
+<!-- CTA -->
+<div class="mt-auto mb-4 px-4">
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg text-label-lg font-label-lg hover:opacity-90 transition-opacity">
+                Post a New Gig
+            </button>
+</div>
+<!-- Footer Links -->
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-lg font-label-lg">Settings</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-label-lg font-label-lg">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col h-screen overflow-hidden bg-background">
+<!-- Top App Bar / Header -->
+<header class="bg-surface-container-lowest px-container-padding-mobile md:px-container-padding-desktop py-4 flex items-center justify-between shadow-[0px_4px_20px_rgba(15,23,42,0.05)] z-40">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="Client Avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional woman in a modern office setting. She is wearing a dark blazer over a light shirt. The lighting is soft and natural, emphasizing a trustworthy and competent demeanor. The background is slightly blurred, showing a bright, contemporary workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkfVuQEqZU4rcUKU5Ni6aTW33w8TXn65GlzJsxahn8m4f2hdh4YTrIbJd2yczQZDbVLs5fU98qmd7PPVVbXGX9O15VOYXCbAXcZolRcHeeGW8ZRkiOtYN_PdrUkzHL9p4ykWLK74QIMXRvTSYGCCOWdAmzrzPJqECmGDkUOOfiLVse8pQ9dv1shK1-OQ1uUDBVsPOtxIQU_U0IfK9-RwuKGm1FYWLzlcrvJETss0wEFh3TiUfOc_JqpCBQI6cOOyQKJz-I6r8bwAiF">
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md font-bold text-on-surface">E-Commerce App Redesign</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">with Sarah Jenkins (Client)</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-secondary-container text-on-secondary-container px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="text-label-md font-label-md">Escrow Secured</span>
+</div>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Split View Container -->
+<div class="flex flex-1 overflow-hidden p-container-padding-mobile md:p-gutter gap-gutter flex-col lg:flex-row">
+<!-- Left Panel: Real-time Chat -->
+<section class="flex-1 bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] flex flex-col overflow-hidden border border-surface-container-high">
+<!-- Chat Header -->
+<div class="px-6 py-4 border-b border-surface-container-high bg-surface-bright flex justify-between items-center">
+<h3 class="text-label-lg font-label-lg text-on-surface">Project Chat</h3>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+<span class="text-label-md font-label-md text-on-surface-variant">Online</span>
+</div>
+</div>
+<!-- Chat Messages Area -->
+<div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+<!-- Message: Other -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+<img alt="Sarah" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional woman in a modern office setting. She is wearing a dark blazer over a light shirt. The lighting is soft and natural, emphasizing a trustworthy and competent demeanor. The background is slightly blurred, showing a bright, contemporary workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuQ8GUlACZkUa7-n3hGAFs1EKyAOGrnPOccCiznrcbb6Ni25QZNoiRK3ulWXjD7dBBhzw5pWKboldUeznDzq2iGGQ5Nq1eIaXb-b3deNENnN0OwHstv6H-TS6iLduunriFRxQB-xL_RQqXU_KOjsBFOur0enFmO3wr-2w3eBQVJSuujEcQnwsMDGy_OBG6j043mQBjZOIjxVyL9Om4r0PfT11jdjp0lWgqEocudVD4aUKGibMz_6MRAPhrjUHpEcY9Dxq7BKEvGsEd">
+</div>
+<div class="flex flex-col gap-1">
+<div class="bg-surface-container-high text-on-surface p-3 rounded-lg rounded-tl-none">
+<p class="text-body-md font-body-md">Hi! I reviewed the latest wireframes for the checkout flow. They look great.</p>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">10:42 AM</span>
+</div>
+</div>
+<!-- Message: Self -->
+<div class="flex gap-4 max-w-[85%] self-end flex-row-reverse">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
+                             You
+                        </div>
+<div class="flex flex-col gap-1 items-end">
+<div class="bg-primary text-on-primary p-3 rounded-lg rounded-tr-none">
+<p class="text-body-md font-body-md">Excellent. I'll proceed with adding the high-fidelity UI components next.</p>
+</div>
+<div class="flex items-center gap-1 text-label-md font-label-md text-on-surface-variant">
+<span>10:45 AM</span>
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</div>
+</div>
+</div>
+<!-- Message: File Share (Other) -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+<img alt="Sarah" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional woman in a modern office setting. She is wearing a dark blazer over a light shirt. The lighting is soft and natural, emphasizing a trustworthy and competent demeanor. The background is slightly blurred, showing a bright, contemporary workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBk-BZok2AQjgqop8LUw3uKxKo_jwMFuV_oXYjfaVRz0JvqFGK3_TPXyBM52jnVlkClTTAH7VQ-m1TMeR75U3iayPKJtIleOsw3yJ6Fhj-VHDDBV65-G1X9wInZSGFciCgdun416cKq7LXwJ3jAvJMyKHR7p7SIQXQehTLx3tntJB5uWGjZB_EsA0Nj4od3SG_k_GHXidj0rxr0mfPncVL2Aw5kl1M6MobIcoFFfAg7Sv6Z8H781B2j40T3HJd_fT79tt7vfGwyE2L">
+</div>
+<div class="flex flex-col gap-1">
+<div class="bg-surface-container-high p-4 rounded-lg rounded-tl-none flex items-center gap-4">
+<div class="bg-surface-container-lowest p-2 rounded">
+<span class="material-symbols-outlined text-primary">description</span>
+</div>
+<div>
+<p class="text-label-lg font-label-lg text-on-surface">Brand_Guidelines_v2.pdf</p>
+<p class="text-label-md font-label-md text-on-surface-variant">2.4 MB</p>
+</div>
+<button class="ml-4 p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">10:48 AM</span>
+</div>
+</div>
+<!-- Typing Indicator -->
+<div class="flex gap-4 max-w-[85%] items-center mt-2">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 opacity-50">
+<img alt="Sarah" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional woman in a modern office setting. She is wearing a dark blazer over a light shirt. The lighting is soft and natural, emphasizing a trustworthy and competent demeanor. The background is slightly blurred, showing a bright, contemporary workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHzz83p2PST9GqL7ct9MgA6xDYWlB9xunfzlgebC1dZu2E_J1x1MhpCvRhjcfls3GqnYzNrBEofQiAQhT7-CQIMwsdBbBfupJijqa3UGoavAOwnQhUwf6F1PzicJUMBf96hlzHh9-9hqH8H9JM72kPkfEwiul6oirMK-LgEHMOr9EdLxsabQGTAbU4uYV9xna_VKyL4eB3BC1h3_LuB1jH_3_AGJBDM62O8vElRD0Ilu4uiU3Hv9OZHtTNmINpU1WPNTR-aZgWPb4N">
+</div>
+<div class="text-label-md font-label-md text-on-surface-variant italic">
+                            Sarah is typing...
+                        </div>
+</div>
+</div>
+<!-- Chat Input -->
+<div class="p-4 bg-surface-bright border-t border-surface-container-high">
+<div class="flex items-center gap-3 bg-surface-container-lowest border border-outline-variant rounded-lg p-2 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant" placeholder="Type a message..." type="text">
+<button class="p-2 bg-primary text-on-primary rounded-md hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right Panel: Milestone Tracker -->
+<section class="w-full lg:w-[400px] flex flex-col gap-6 overflow-y-auto pr-2 custom-scrollbar">
+<!-- Project Overview Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] p-6 border border-surface-container-high">
+<h3 class="text-headline-md font-headline-md font-semibold text-on-surface mb-4">Project Overview</h3>
+<div class="flex justify-between items-end mb-2">
+<span class="text-label-lg font-label-lg text-on-surface-variant">Total Progress</span>
+<span class="text-headline-md font-headline-md font-bold text-primary">65%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 mb-6">
+<div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-4 rounded-lg">
+<p class="text-label-md font-label-md text-on-surface-variant mb-1">Total Value</p>
+<p class="text-body-lg font-body-lg font-semibold text-on-surface">$4,500</p>
+</div>
+<div class="bg-surface-container p-4 rounded-lg">
+<p class="text-label-md font-label-md text-on-surface-variant mb-1">In Escrow</p>
+<p class="text-body-lg font-body-lg font-semibold text-secondary-fixed-dim">$1,500</p>
+</div>
+</div>
+</div>
+<!-- Milestone Tracker -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] p-6 border border-surface-container-high flex-1">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-headline-md font-headline-md font-semibold text-on-surface">Milestones</h3>
+<button class="text-label-md font-label-md text-primary hover:underline">View Agreement</button>
+</div>
+<div class="relative border-l-2 border-surface-container-high ml-3 space-y-8 pb-4">
+<!-- Milestone 1 (Completed) -->
+<div class="relative pl-6">
+<div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-secondary-container border-2 border-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-secondary-container">check</span>
+</div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-label-lg font-label-lg text-on-surface">1. Wireframes &amp; UX Flow</h4>
+<span class="text-label-md font-label-md bg-surface-container px-2 py-1 rounded text-on-surface-variant">$1,000</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-2">Approved on Oct 12</p>
+<div class="inline-flex items-center gap-1 text-secondary font-medium text-label-md">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+                                Funds Released
+                            </div>
+</div>
+<!-- Milestone 2 (Active) -->
+<div class="relative pl-6">
+<div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-2 border-surface-container-lowest"></div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-label-lg font-label-lg text-on-surface font-bold">2. High-Fidelity UI Design</h4>
+<span class="text-label-md font-label-md bg-primary-container text-on-primary-container px-2 py-1 rounded">$1,500</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-3">Due: Oct 25</p>
+<div class="bg-surface p-3 rounded-lg border border-outline-variant mb-3">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock</span>
+<span class="text-label-md font-label-md text-on-surface-variant">Funds in Escrow</span>
+</div>
+<button class="w-full bg-surface-container-high text-on-surface-variant py-2 rounded text-label-md font-label-md hover:bg-surface-dim transition-colors">
+                                    Submit Work for Approval
+                                </button>
+</div>
+</div>
+<!-- Milestone 3 (Pending) -->
+<div class="relative pl-6">
+<div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-surface-container-high border-2 border-surface-container-lowest"></div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-label-lg font-label-lg text-on-surface-variant">3. Prototypes &amp; Handoff</h4>
+<span class="text-label-md font-label-md bg-surface-container px-2 py-1 rounded text-on-surface-variant">$2,000</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">Awaiting previous milestone</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

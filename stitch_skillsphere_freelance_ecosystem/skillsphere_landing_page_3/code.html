@@ -1,0 +1,475 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SkillSphere - Find Expert Talent in Your Neighborhood</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#dae2fd",
+                      "surface-container": "#eceef0",
+                      "inverse-surface": "#2d3133",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#bec6e0",
+                      "on-tertiary-fixed-variant": "#004395",
+                      "secondary-fixed-dim": "#4edea3",
+                      "on-error-container": "#93000a",
+                      "primary": "#000000",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#565e74",
+                      "background": "#f7f9fb",
+                      "on-background": "#191c1e",
+                      "error": "#ba1a1a",
+                      "surface": "#f7f9fb",
+                      "surface-container-high": "#e6e8ea",
+                      "on-tertiary-container": "#3980f4",
+                      "on-secondary-fixed": "#002113",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#001a42",
+                      "secondary-container": "#6cf8bb",
+                      "primary-fixed-dim": "#bec6e0",
+                      "tertiary": "#000000",
+                      "on-primary-fixed": "#131b2e",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#f7f9fb",
+                      "tertiary-container": "#001a42",
+                      "secondary": "#006c49",
+                      "surface-dim": "#d8dadc",
+                      "tertiary-fixed": "#d8e2ff",
+                      "surface-variant": "#e0e3e5",
+                      "on-secondary-fixed-variant": "#005236",
+                      "tertiary-fixed-dim": "#adc6ff",
+                      "secondary-fixed": "#6ffbbe",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-secondary-container": "#00714d",
+                      "surface-container-low": "#f2f4f6",
+                      "on-surface": "#191c1e",
+                      "on-surface-variant": "#45464d",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#c6c6cd",
+                      "on-primary-container": "#7c839b",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "primary-container": "#131b2e",
+                      "outline": "#76777d",
+                      "surface-container-highest": "#e0e3e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-padding-desktop": "40px",
+                      "base": "4px",
+                      "container-padding-mobile": "16px",
+                      "section-gap": "64px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-xl": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "mono-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "mono-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+        .ambient-shadow-sm {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .ambient-shadow-md {
+            box-shadow: 0px 8px 30px rgba(15, 23, 42, 0.08);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-highest shadow-sm docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-container-padding-desktop py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-6">
+<!-- Brand Logo -->
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-on-surface">
+                    SkillSphere
+                </div>
+<!-- Search Bar (on_left) -->
+<div class="hidden lg:flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant focus-within:border-on-tertiary-container focus-within:ring-1 focus-within:ring-on-tertiary-container transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-2" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md text-on-surface w-64 placeholder:text-on-surface-variant/70" placeholder="Search by Location/Skill" type="text">
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<!-- Active Item: Find Talent (Since it's landing page for finding talent) -->
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-lg font-label-lg hover:bg-surface-container dark:hover:bg-surface-container-high transition-all duration-200" href="#">Find Talent</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors text-label-lg font-label-lg hover:bg-surface-container dark:hover:bg-surface-container-high transition-all duration-200" href="#">Find Work</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors text-label-lg font-label-lg hover:bg-surface-container dark:hover:bg-surface-container-high transition-all duration-200" href="#">Enterprise</a>
+</nav>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container dark:hover:bg-surface-container-high rounded-full transition-all duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container dark:hover:bg-surface-container-high rounded-full transition-all duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant ml-2">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="A small, professional circular avatar showing a diverse young professional smiling warmly. High quality, well-lit portrait against a neutral bright background. Minimalist styling fitting a modern corporate web application. Crisp detail and natural skin tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj0j-y91YAHuhiJ1KhIyc_IkudGwtfsMTe52Z330F35fZY7lpM01nMDq2zcJ-3xZVpOaZDcpxXbkD7H_TcOX3egqkFWqjDDOYVmyHfcAft62Q863hCcddsREkQkB4UkHLx_mo5v805rZ7Kuanyqzn4o9NKtEL2Oelqp2QsrcyDTAqnd5Icf_DzfhW6skNj0sfmieVFlETxgKcoKkklZltXoBuDc5yIc-G8j9hxemBCDXeU2w8CfkN1bdKxRVDEjvuambM79LsXTJ2g">
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto overflow-hidden">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-primary-fixed opacity-50 rounded-full blur-3xl z-0 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] bg-secondary-fixed opacity-20 rounded-full blur-3xl z-0 pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-lowest border border-outline-variant rounded-full w-fit mb-2">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-label-md font-label-md text-on-surface-variant">Verified Competence Guaranteed</span>
+</div>
+<h1 class="text-headline-xl font-headline-xl text-primary md:text-headline-xl text-headline-lg-mobile font-headline-lg-mobile tracking-tight">
+                        Find Expert Talent in Your <span class="text-on-tertiary-container relative inline-block">Neighborhood
+                            <svg class="absolute w-full h-3 -bottom-1 left-0 text-primary-fixed z-[-1]" preserveAspectRatio="none" viewBox="0 0 100 10"><path d="M0 5 Q 50 10 100 5" fill="transparent" stroke="currentColor" stroke-width="8"></path></svg>
+</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
+                        The intelligent marketplace for hyperlocal freelance collaboration. Connect with vetted professionals nearby for high-quality, reliable service delivery.
+                    </p>
+<!-- Hero Search -->
+<div class="mt-8 bg-surface-container-lowest rounded-xl p-2 flex flex-col sm:flex-row items-center gap-2 ambient-shadow-md border border-outline-variant max-w-3xl">
+<div class="flex-1 flex items-center px-4 py-3 w-full border-b sm:border-b-0 sm:border-r border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md w-full placeholder:text-on-surface-variant/70" placeholder="What skill are you looking for?" type="text">
+</div>
+<div class="flex-1 flex items-center px-4 py-3 w-full">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">location_on</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md w-full placeholder:text-on-surface-variant/70" placeholder="Zip code or City" type="text">
+</div>
+<button class="w-full sm:w-auto bg-primary text-on-primary px-8 py-4 rounded-lg text-label-lg font-label-lg hover:bg-inverse-surface transition-colors whitespace-nowrap">
+                            Search Talent
+                        </button>
+</div>
+<div class="flex items-center gap-4 mt-6">
+<span class="text-label-md font-label-md text-on-surface-variant">Popular:</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-md font-label-md text-on-surface hover:bg-surface-container-high cursor-pointer transition-colors">UI Design</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-md font-label-md text-on-surface hover:bg-surface-container-high cursor-pointer transition-colors">Plumbing</span>
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-md font-label-md text-on-surface hover:bg-surface-container-high cursor-pointer transition-colors">Photography</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 mt-12 lg:mt-0 relative hidden md:block">
+<!-- Hero Composite Image/Bento Graphic -->
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden ambient-shadow-md border border-outline-variant bg-surface-container-lowest p-4">
+<img alt="Team collaborating" class="w-full h-full object-cover rounded-xl" data-alt="A modern, bright corporate workspace scene showing diverse professionals collaborating over architectural plans or digital interfaces. High-key lighting emphasizing a pristine white and navy aesthetic. The mood is focused, energetic, and highly professional, reflecting verified competence and premium service delivery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdJtZN4A5xLgea9EaoZJ2qvMncFGNmvvl6uYai8etkgi9fijDwIjLxgtZRwUHZ0__d9S7u2i-z70wu8WcQpS5wlfgVGcninrzKVRVCwcK6fW6eRirK4ngOZWpmwxHcSvxxqW2tD2g0j7r2D9MddUE2jfV64aT-H8rHQzNZLCBMWz2ONMUBD_wxbqTPukxjtm_-EdUJkOg31WeUwIZ9IodkdvNDyANvFyFizo2bCl4n_Z8Seb5FS0vFtkCyIK07Yq6ulGQSHtPOHKTS">
+<!-- Floating UI Element -->
+<div class="absolute bottom-8 left-8 right-8 bg-surface-container-lowest/90 backdrop-blur-md rounded-xl p-4 ambient-shadow-md border border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+<div>
+<p class="text-label-lg font-label-lg text-primary">Project Completed</p>
+<p class="text-label-md font-label-md text-on-surface-variant">Payment secured in escrow</p>
+</div>
+</div>
+<span class="text-headline-md font-headline-md text-primary">$450</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-section-gap bg-surface px-container-padding-mobile md:px-container-padding-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-4">A System Built on Trust and Efficiency</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">We eliminate the friction of local hiring through intelligent systems and rigorous verification.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 ambient-shadow-sm border border-outline-variant hover:ambient-shadow-md transition-shadow">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-[28px]">robot_2</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">AI Matching</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Our algorithms connect your specific project requirements with local talent possessing the exact verified skills needed.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 ambient-shadow-sm border border-outline-variant hover:ambient-shadow-md transition-shadow">
+<div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container text-[28px]" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Escrow Payments</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Funds are held securely in escrow until the milestone is approved. Zero financial risk for discerning clients.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 ambient-shadow-sm border border-outline-variant hover:ambient-shadow-md transition-shadow">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary-container text-[28px]">chat</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3">Real-time Chat</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Integrated, high-fidelity messaging ensures crystal clear communication throughout the project lifecycle.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Local Talent (Bento/Card Grid) -->
+<section class="py-section-gap bg-surface-container-lowest px-container-padding-mobile md:px-container-padding-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="text-headline-lg font-headline-lg text-primary mb-2">Featured Local Talent</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Top-rated professionals currently available in your area.</p>
+</div>
+<button class="text-label-lg font-label-lg text-on-tertiary-container hover:underline flex items-center gap-1">
+                        View all <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Talent Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow-sm overflow-hidden hover:-translate-y-1 transition-transform duration-200">
+<div class="h-32 bg-surface-container-high relative">
+<img alt="Sarah J" class="w-full h-full object-cover opacity-80" data-alt="A clean, abstract background showing subtle architectural lines in soft navy and slate tones. The image acts as a premium header texture for a professional profile card, emphasizing a corporate, structured aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDznnln8X6hR7Iw_eps0HQ_LIswups7zMkL8wkN6hpVE2Es2NSMIcxVUCkxrStyjFN_aTdYWtF5B2jGQXlama5DwTc1E6X-Au0yQPxWQ_X199vddB6AHQ6g89J6NptH5MGxcod3bTxg71KyjqR74JNba_5ezZ7rbR6lbHNgjQMBmmaO_UwC0Fnpd1JhbMhE9uFfxAsFpol4R8irg7TYHu9wLD9xKaRUe3A3pWOqpgujvy_SOWTjA9Lc4rwZeS5gl3-ObYCoZNbnJs3O">
+<div class="absolute -bottom-8 left-4 w-16 h-16 rounded-full border-4 border-surface-container-lowest bg-surface overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Professional headshot of a female software engineer with a confident smile. Well-lit studio setting with a clean, neutral background. She wears smart-casual attire suitable for a high-end freelance marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIwo28AMvHsQWLX54j4BvT4Uc1cuHylmP0dF9MLeQzg_5b0CXITcybDI4eGxtb17b4h1QR8W24O0tdPlOga6T4OLf3EeA_O9frq34zarKmXXc5k-NkVv9pea2hG2jVAtA3XJZhsYfWlIm9IfzQ9AM377rPHjZd-DhzIdOMxR0DnLvyk-xvKYcVXDz5-VYrN6DAsXqUiTsGMkidFgPF-bWrXSww4G8y7z6zXGe0xE1_ZnBXe21vdChVhLoi2ztMr1RoubEs2bYCmYRL">
+</div>
+</div>
+<div class="p-4 pt-10">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-label-lg font-label-lg text-primary">Sarah Jenkins</h3>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-label-md">4.9</span>
+</div>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant mb-3">Senior UX/UI Designer</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-surface-container rounded text-label-md font-label-md text-on-surface-variant">Figma</span>
+<span class="px-2 py-1 bg-surface-container rounded text-label-md font-label-md text-on-surface-variant">Webflow</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-surface-variant">
+<span class="text-label-lg font-label-lg text-primary">$85/hr</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;" title="Identity Verified">verified</span>
+</div>
+</div>
+</div>
+<!-- Talent Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow-sm overflow-hidden hover:-translate-y-1 transition-transform duration-200">
+<div class="h-32 bg-surface-container-high relative">
+<img alt="David M" class="w-full h-full object-cover opacity-80" data-alt="A clean, abstract background showing a blurred close-up of code on a dark screen. The image acts as a premium header texture for a professional profile card, emphasizing a highly technical, structured aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWByVX89YrVCYTOw1iiG_P7cFbPPaaeH5zmtjnH5HLF63mcfFIS-h1el7r5pIw93HTGEbjCrqgWofMzfd20UWFW5ioVCNqsiluUJknzA38-OTrTk3pQCj7E5Dv5l-PdgGzUofx09DhaCO-9SZjsJpddd6b5PZUfPBeBaVxFBjZbtvQZYCT1labgbj0h13uG5XOgbSULFnXSADViSPrcI5Pcrr_jPv4tBp5vv45nnPzizUmpguz60s-3VUXhJVc9vluTfX5bmvELk-y">
+<div class="absolute -bottom-8 left-4 w-16 h-16 rounded-full border-4 border-surface-container-lowest bg-surface overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Professional headshot of a male full-stack developer looking directly at the camera. Soft, high-key lighting with a pristine white background. He presents a clean, approachable, and highly competent demeanor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4FB7UjF3ofto0U2zoC9_hHRWdFBDjf84RfgqYnrsz4rK4L9e2DejpD5_wJPnW79rWrsmRX9cgTBKSQeGDxD2nMaAiCYmd8X3wuqqImXqkcxyXnaIh9ICCCjB5u-w6pvbb2nUNR6khKhYuEgCiRbARUzjwmddUBLUxZ_VFXV9lnCOzyy1squEMeL3ML-0sKPyU-Z8OVhxYURXQWijVgb5mYZhfdMf9mrTijKH0QXpXswCFAiami39CJIc3XELWWioDKuJFLMdAOjIq">
+</div>
+</div>
+<div class="p-4 pt-10">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-label-lg font-label-lg text-primary">David Miller</h3>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-label-md">5.0</span>
+</div>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant mb-3">Full Stack Developer</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-surface-container rounded text-label-md font-label-md text-on-surface-variant">React</span>
+<span class="px-2 py-1 bg-surface-container rounded text-label-md font-label-md text-on-surface-variant">Node.js</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-surface-variant">
+<span class="text-label-lg font-label-lg text-primary">$110/hr</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;" title="Identity Verified">verified</span>
+</div>
+</div>
+</div>
+<!-- Talent Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow-sm overflow-hidden hover:-translate-y-1 transition-transform duration-200">
+<div class="h-32 bg-surface-container-high relative">
+<img alt="Elena R" class="w-full h-full object-cover opacity-80" data-alt="A clean, abstract background showing a minimalist office desk setup with a notebook and pen. Soft lighting. The image acts as a premium header texture for a professional profile card, emphasizing a corporate, organized aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf4txt6Ngdo0gypK2kL8JrAkzS-DmvoB_IQrtfYfuLKZSwEsJzrS95-xF5YqQyC_UBMCptbqq_YfJqFEFmDgkcP5k65xRUFbdJqDP5tfi9R_OYLnA2WQbVxlrb7Q0xVNgfwzMEM7Es_rvYjfD0PErgctg_R9MggYXSz-WmTToeYPA5x_QFxf0zfIt-h4d549y0Nkb8TlwqGUZlHCvfEjnYZmjWBdsEK92Yr-f332A0t4gwBpo8tH58klLdZIhmvx4u7QCM9H1sflIu">
+<div class="absolute -bottom-8 left-4 w-16 h-16 rounded-full border-4 border-surface-container-lowest bg-surface overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Professional headshot of a female financial consultant with glasses. Bright, even lighting emphasizing clarity and trust. The styling is strictly corporate and modern, reflecting a premium service tier." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN2p-loSMhe9oIkz5RxLpuUW2j0VBicHbWSmpa_07Leu_bel-_XFJnbUo-v_agtdcclw36S3aMmykMU9RdL1W_PZlQWO-LopGVi0DcTg5ACzKl8Y4QTQSYRN1_N7WDwvDUiJsL895h0MAFza2Gs9A8Pcp0U_lhxH-TSqtKeBVyMvdOyOJhlfcqWklP4Hyq2lc-AORAX-95VHCN7mVDEeqOC_IGmAJK7fsw9Arg6A7nxvni_j9N8WOfLuAOSafJTIXS6PQFHk8AD8L_">
+</div>
+</div>
+<div class="p-4 pt-10">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-label-lg font-label-lg text-primary">Elena Rodriguez</h3>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-label-md">4.8</span>
+</div>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant mb-3">Financial Consultant</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-surface-container rounded text-label-md font-label-md text-on-surface-variant">Tax Prep</span>
+<span class="px-2 py-1 bg-surface-container rounded text-label-md font-label-md text-on-surface-variant">Advisory</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-surface-variant">
+<span class="text-label-lg font-label-lg text-primary">$150/hr</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;" title="Identity Verified">verified</span>
+</div>
+</div>
+</div>
+<!-- Talent Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow-sm overflow-hidden hover:-translate-y-1 transition-transform duration-200">
+<div class="h-32 bg-surface-container-high relative">
+<img alt="Marcus T" class="w-full h-full object-cover opacity-80" data-alt="A clean, abstract background showing out-of-focus photography equipment in a studio. The image acts as a premium header texture for a professional profile card, emphasizing a creative yet highly structured aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD9F4duEK6rN1TCvruvJyt7_eS8q5nSbltWyX3dLulIILQdiE8ioEvRptc_7-R3fWdLhBbqcTqY9Tb9dxI5l2Im0H9tElfDU8j3jdcDPmjVo4gaaEAJzHlGSApzYybsWbLlml_uy6ReF8EhzOM-SO5vu5AQsaY5SExjYowN4PJkjP8zz3sAXRqqwn54hlz4PgkOBbWsNO6TWNpBbsQWHkUq2Gwwaf7USSWMCizcR_kwKwf7xv4fP1SoU8XkwVUQ0-Z1u9jY8HYpM1M">
+<div class="absolute -bottom-8 left-4 w-16 h-16 rounded-full border-4 border-surface-container-lowest bg-surface overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Professional headshot of a male commercial photographer. He has a slight, confident smile. The background is a clean, modern slate grey. The lighting is crisp and deliberate, suitable for a premium freelance platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDalJhMYJNugFZ6vFEs6XAs4MI085V7o8Rlkjb8KQcrKKceS8HIVt93zduEeyi7G2CVdhpmxr2d8OKntR4XenFMs2JgfA472wcKseSmsweLOVIg0_aiCL8MhP5kzkmcvwE6A3UYn9cloAnzbtPYgt1-Yuiwnncfi0oRNoY0jvCTA4lnIg-3gyomSSo45vIEgi-rETsxfCMr9lvuflDnCqCxn5l3pZ0lkEa8npJpDsa6MhHgkSx0w_TINkvfYWBhqXQv5ggt8fJC_AzJ">
+</div>
+</div>
+<div class="p-4 pt-10">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-label-lg font-label-lg text-primary">Marcus Thorne</h3>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-label-md">4.9</span>
+</div>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant mb-3">Commercial Photographer</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-surface-container rounded text-label-md font-label-md text-on-surface-variant">Product</span>
+<span class="px-2 py-1 bg-surface-container rounded text-label-md font-label-md text-on-surface-variant">Real Estate</span>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-surface-variant">
+<span class="text-label-lg font-label-lg text-primary">$95/hr</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;" title="Identity Verified">verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-24 px-container-padding-mobile md:px-container-padding-desktop">
+<div class="max-w-5xl mx-auto bg-primary-container rounded-2xl p-12 text-center ambient-shadow-md relative overflow-hidden">
+<!-- Decorative rings -->
+<div class="absolute top-0 right-0 w-64 h-64 border border-on-primary-container/20 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 border border-on-primary-container/20 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+<div class="relative z-10">
+<h2 class="text-headline-lg font-headline-lg text-on-primary mb-4">Ready to elevate your projects?</h2>
+<p class="text-body-lg font-body-lg text-on-primary-container mb-10 max-w-2xl mx-auto">Whether you're looking to hire top-tier local professionals or you're an expert seeking high-value clients, SkillSphere is your platform.</p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+<button class="w-full sm:w-auto bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary px-8 py-3 rounded-lg text-label-lg font-label-lg transition-all ambient-shadow-sm border border-transparent">
+                            Post a Gig
+                        </button>
+<button class="w-full sm:w-auto bg-transparent border border-outline-variant hover:border-on-primary text-on-primary px-8 py-3 rounded-lg text-label-lg font-label-lg transition-all">
+                            Join as Freelancer
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Simple Footer (not requested explicitly, but needed for completeness) -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-8 px-container-padding-desktop text-center">
+<p class="text-label-md font-label-md text-on-surface-variant">© 2024 SkillSphere. All rights reserved. Verified Competence.</p>
+</footer>
+</body></html>

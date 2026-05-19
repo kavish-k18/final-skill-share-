@@ -1,0 +1,19 @@
+SkillSphere: Hyperlocal Freelance Ecosystem
+
+Project Scope & Requirements:
+- Platform Name: SkillSphere
+- Core Value: Intelligent, hyperlocal freelance matching.
+- User Roles: Client, Freelancer, Admin.
+
+Core Features:
+1. Authentication: 2FA, Social Login, RBAC.
+2. Profiles: Portfolios, skill proficiency, availability.
+3. Marketplace: Milestone-based gigs, budget ranges.
+4. AI Matching: Huggingface-powered similarity & location matching.
+5. Search: Advanced filtering (proximity, skills).
+6. Collaboration: Real-time chat (Socket.IO), notifications.
+7. Payments: Secure escrow/milestones (Stripe/Razorpay).
+8. Governance: Admin dashboard, dispute resolution, fraud detection.
+
+Technical Stack: MERN (MongoDB, Express, React, Node.js), Tailwind CSS, Redux Toolkit.
+Target Review Date: June 3rd.
